@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Para Yuriko 💜</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+  color: #fff;
+  text-align: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Flores decorativas */
+.flores {
+  font-size: 35px;
+  margin: 20px 0;
+}
+
+/* Marco floral estilo elegante */
+.marco {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 40px;
+  border-radius: 25px;
+  background: rgba(0,0,0,0.45);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border: 6px solid #ffffff55;
+  position: relative;
+}
+
+.marco::before {
+  content: "🌸 🌷 🌹 🌺 🌻 🌼 🌸 🌷 🌹 🌺 🌻 🌼";
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  font-size: 25px;
+}
+
+.marco::after {
+  content: "🌸 🌷 🌹 🌺 🌻 🌼 🌸 🌷 🌹 🌺 🌻 🌼";
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  right: 0;
+  font-size: 25px;
+}
+
+button {
+  margin-top: 40px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  background: #7b2ff7;
+  color: white;
+  font-size: 1.3em;
+  cursor: pointer;
+  transition: transform .2s, background .3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  background: #f107a3;
+  transform: scale(1.1);
+}
+
+#contenido {
+  display: none;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#contenido.mostrar {
+  display: block;
+  opacity: 1;
+}
+
+img {
+  border-radius: 20px;
+  margin: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  max-width: 250px;
+}
+
+/* Corazones flotando */
+.corazon {
+  position: absolute;
+  color: rgba(255,255,255,0.7);
+  font-size: 20px;
+  animation: flotar 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes flotar {
+  from { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+  to { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="flores">🌸 🌷 🌹 🌺 🌻 🌼 🌸 🌷 🌹 🌺 🌻 🌼</div>
+
+<h1>Para ti Yuri, mi niña 💜</h1>
+
+<button onclick="mostrar()">Abrir 💌</button>
+
+
+
+<div id="contenido">
+    
+<img src="https://i.pinimg.com/originals/42/70/c5/4270c5c71c891f34f332dc7637414cd9.gif">
+
+  <div class="marco">
+    <p>Yuri 💜</p>
+
+    <p>
+      Hoy simplemente me dieron ganas de hacer algo para ti.
+      Pensé en ti… y sonreí.
+    </p>
+
+    <p>
+      A veces me pongo a pensar en lo mucho que me encantas,
+      y no es solo una parte de ti… es todo.
+      Me encantas cuando te emocionas,
+      cuando te enojas un poquito,
+      cuando te pones sensible,
+      cuando gritas jugando,
+      cuando dudas,
+      cuando eres tú sin intentar ser perfecta.
+    </p>
+
+    <p>
+      Me vuelves loco… pero de esa forma que da paz,
+      no caos.
+      Me haces sentir algo bonito, algo real.
+    </p>
+
+    <p>
+      Me encantas completa,
+      real,
+      imperfecta,
+      única.
+    </p>
+
+    <p>
+      Gracias por estar en mi vida.
+      Gracias por dejarme quererte.
+    </p>
+
+    <p>Con todo lo que soy,<br>David 😼</p>
+    <img src="https://media.tenor.com/awS7orwiL34AAAAM/baby-penguin.gif">
+  </div>
+
+  <h2>🐧💜</h2>
+  <img src="https://i.pinimg.com/originals/68/99/e4/6899e458a055c56ccfa25f4acc155bda.gif">
+   <img src="https://i.pinimg.com/originals/39/29/af/3929af02d558f06c4ea4f7776509c668.gif">
+
+</div>
+
+<div class="flores">🌸 🌷 🌹 🌺 🌻 🌼 🌸 🌷 🌹 🌺 🌻 🌼</div>
+
+<audio id="musica" loop>
+  <source src="https://doiker380.github.io/Yuri03/Love.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+function mostrar() {
+  const contenido = document.getElementById("contenido");
+  contenido.classList.add("mostrar");
+  document.getElementById("musica").play();
+}
+
+function crearCorazon() {
+  const corazon = document.createElement("div");
+  corazon.classList.add("corazon");
+  corazon.style.left = Math.random() * 100 + "vw";
+  corazon.style.fontSize = Math.random() * 20 + 15 + "px";
+  corazon.textContent = "❤";
+  document.body.appendChild(corazon);
+
+  setTimeout(() => {
+    corazon.remove();
+  }, 10000);
+}
+
+setInterval(crearCorazon, 600);
+</script>
+
+</body>
+</html>
